@@ -1,0 +1,251 @@
+\documentclass{beamer}
+\usetheme{default} % choose a theme
+\usecolortheme{default} % choose a color scheme
+\title{Raman Spectroscopy}
+\author{S. John Sharon Sandeep}
+\date{\today}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{xcolor}
+
+\usepackage{amssymb} %(ams symbols, use \mathbb{} for blackboard symbols)
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{cleveref}
+\usepackage{listings}
+\usepackage[shortlabels]{enumitem}
+
+\setbeamertemplate{frametitle}{
+    \nointerlineskip%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{frametitle}
+        \centering
+        \usebeamerfont{frametitle}\insertframetitle
+    \end{beamercolorbox}
+}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{History}
+\begin{frame}
+\frametitle{A New Type of Secondary Radiation}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.78\textwidth]{C:/Users/johns/Downloads/PPT/Ramanhimself.png}
+    \caption{}
+    \label{fig:1}
+\end{figure}
+\end{frame}
+
+\section{Theory}
+\begin{frame}
+\frametitle{Quantum mechanical model of a diatomic molecule}
+For a molecule approximated by two balls connected with a spring, added with a potential that accounts for:
+\begin{itemize}[\textbullet]
+\item repulsion between electronic clouds when the atomic nuclei approach
+\item variable behaviour of the bond force when the atoms move apart from one another
+\end{itemize}
+the energy spectrum is:
+\begin{itemize}[\textbullet]
+\item discrete 
+\item when written as an increasing function of vibrational quantum number $v$, the difference between two adjacent energy levels decreases with $v$
+\item allows occurrence of transitions with $\Delta v \geq 2$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Further if bond rupturing for over-displacement is accounted, the energy spectrum would look like figure B in the following:
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.85\textwidth]{C:/Users/johns/Pictures/Screenshots/Screenshot (89).png}
+  \caption{Schematic representation of the harmonic (A) and anharmonic (B) models for the potential energy of a diatomic molecule. $d_e=$ equilibrium distance (U $=$ minimum).}
+  \label{fig:diatomicspectrum}
+\end{figure}
+\end{frame}
+
+
+%\section{}
+\begin{frame}
+\frametitle{Possible transitions for different wavenumbers of incident light}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.85\textwidth]{C:/Users/johns/Downloads/PPT/JablonskiDiagram.png}
+  \caption{Energy level diagram related to IR absorption, Raman scattering and fluorescence emission}
+  \label{fig:jablonski}
+\end{figure}
+\end{frame}
+
+\section{Raman Scattering}
+\begin{frame}
+\frametitle{Raman Scattering}
+\begin{itemize}[\textbullet]
+\item As seen in previous slide, a given molecule at one of its ground vibrartional states, when irradiated with a monochromatic light of wavenumber within a certain range (dependent on the molecule), say $\bar{\nu_s}$, it gets excited to a virtual state and within $10^{-14} s$, it returns to one of the ground vibrational state emitting a photon of the same energy it lost. Light due to such photons is called scattered light. This phenomenon is called Scattering of light. 
+\item The scattered light is predominantly of the same wavenumber $\bar{\nu_s}$, and for some set of $\bar{\nu_0}s$, there is a very small intensity of light with wavenumber $\bar{\nu_s}+\bar{\nu_0}$ and of even less intesity with wavenumber $\bar{\nu_s}-\bar{\nu_0}$.\\
+\textcolor{blue}{Inference/Reason?}
+\item Defining ramanshift for a scattered light of wavenumber $\bar{\nu_0}$ as $\bar{\nu_s}-\bar{\nu_0}$ where $\bar{\nu_s}$ is the wavenumber of source light, lets see an example of raman spectrum for a molecule.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Raman Spectra of CCl4}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.5\textwidth]{C:/Users/johns/Downloads/PPT/Raman-spectrum-of-CCl4-532nm-laser.png}
+    \caption{Both anti-Stokes and Stokes lines (532nm source)}
+    \label{fig:left}
+\end{figure}
+Where peaks corresponding to: 
+\begin{itemize}[\textbullet]
+\item{Positive Raman-Shifts: Stokes lines} 
+\item{Negative Raman-Shifts:  Anti-Stokes lines} 
+\item{0 Raman-Shift:  Rayleigh lines} 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.85\textwidth]{C:/Users/johns/Downloads/PPT/ccl4.png}
+    \caption{Stokes lines for CCl4 as obtained by our group in lab}
+    \label{fig:right}
+\end{figure}
+\end{frame}
+
+\section{Classical theory}
+\begin{frame}
+\frametitle{Classical theory}
+Raman scattering originates from the interaction between incident electromagnetic radiation and 
+molecular vibration. According to classical theory, when a molecule is  placed in an 
+electric field $E=E_s \cos(2\pi \nu_{s} t)$, an electric dipole moment P is induced, 
+\begin{equation}
+P=\alpha E  \label{eq1}
+\end{equation}
+ where $\alpha$ is the polarizability. Considering only lower order Raman scattering, then since molecular vibrations are composed of several normal modes, it can be written as,
+\begin{equation}
+\alpha=\alpha_0+\bigg{(}\frac{\partial \alpha}{\partial Q_i}\bigg{)} Q_{i} + \ldots \label{eqn2}
+\end{equation}
+where $Q$ is the normal coordinates of the various vibration modes and can be expressed as, $Q_{i}=Q_{i0} \cos(2 \pi \nu_{i} t)$. Substituting \eqref{eqn2} into the dipole moment $P$ gives
+\begin{equation}
+P=\alpha_0 E_s \cos(2\pi \nu_{s} t) + \frac{1}{2} \bigg{(}\frac{\partial \alpha}{\partial Q_i}\bigg{)} Q_{i0} E_{s} [\cos(2\pi t(\nu_{s} +\nu_{i})) + \cos(2\pi t (\nu_0 - \nu_i))] + \ldots  \label{eqn3}
+\end{equation}
+\end{frame}
+
+
+\section{Instrumentation}
+\begin{frame}
+\frametitle{Instrument setup}
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{C:/Users/johns/Downloads/PPT/dispersionspectro.png}
+    \caption{Dispersion Raman Spectrometer}
+    \label{fig:left}
+  \end{subfigure}%
+  \hfill
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{C:/Users/johns/Downloads/PPT/FTspectro}
+    \caption{FT-Raman Spectrometer}
+    \label{fig:right}
+  \end{subfigure}
+  \caption{Schematic representations of experimental setups}
+  \label{fig:both}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instrumentation}
+There are two main issues in Raman spectroscopy that need to be addressed by 
+suitable instrumentation:
+\begin{itemize}[\textbullet]
+\item Inherent weakness of the Raman scattering signal as compared to the intense Rayleigh scattering
+\item Spectral resolution
+\end{itemize}
+
+Five basic components for a Raman spectrometer:
+\begin{itemize}[\textbullet]
+\item An intense laser source
+\item Sample handling unit 
+\item Monochromator or interferometer 
+\item Detector 
+\item Signal processing and output device
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Instrumentation}
+\large{\textcolor{blue}{Radiation Sources for Raman Spectroscopy}}
+\\
+\begin{itemize}[\textbullet]
+\item Laser: high intensity, single wavelength and 
+coherence
+\item The intensity of Raman scattering is dependent on the fourth power of the frequency 
+of the exciting radiation
+\end{itemize}
+
+\large{\textcolor{blue}{Sample Handling Devices}}
+\\
+\begin{itemize}[\textbullet]
+\item Glass cuvettes can be used
+\item Water is not as much of a problem as in IR spectroscopy
+\end{itemize}
+
+\large{\textcolor{blue}{Transducers or Detectors}}
+\\
+\begin{itemize}[\textbullet]
+\item Initially eyes were the detectors followed by photographic plates
+\item Photomultiplier tubes, FT instruments
+\item Nowadays, including the ones in lab use charge-coupled devices (CCDs)
+\item Filtering devices like holographic grating or 
+interference filters kept before the detector to filter Rayleigh component
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Instrumentation}
+\large{\textcolor{blue}{Fibre-optic probes}}
+\\
+\begin{itemize}[\textbullet]
+\item Laser beam from source is focused onto a fine bundle 
+of optical fibres called input fibres that transport it to the sample
+\item These input fibres are enclosed by a set of optical fibres called collection fibres
+\item Collection fibres collect the scattered radiation from the sample and send it back to the instrument
+\item Directed to a suitable monochromator
+\end{itemize}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.6\textwidth]{C:/Users/johns/Downloads/PPT/Ramanprobe.png}
+    \caption{Optical path and measurement volume of Raman probe}
+    \label{fig:1}
+\end{figure}
+\end{frame}
+
+
+
+\section{Bibliography}
+\begin{frame}
+\frametitle{Bibliography}
+\begin{itemize}[\textbullet]
+\item IGNOU Self-Learning material (Unit-6 Raman spectroscopy)
+\item Near Infrared Spectroscopy: fundamentals, practical aspects and analytical applications - Celio Pasquini
+\item Raman Spectroscopy for In-Line Water Quality Monitoring - Instrumentation and Potential - Zhiyun, Deen M.J., Selvaganapathy
+\end{itemize}
+\end{frame}
+
+
+\end{document}
